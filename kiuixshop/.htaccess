@@ -1,0 +1,53 @@
+RewriteEngine On
+
+# SEO-friendly URLs
+RewriteRule ^home$ index.php [L]
+RewriteRule ^about$ about.php [L]
+RewriteRule ^products$ products.php [L]
+RewriteRule ^contact$ contact.php [L]
+RewriteRule ^faq$ faq.php [L]
+
+# Old "services" URL -> products
+RewriteRule ^services(\.php)?$ products.php [R=301,L]
+
+# Admin routes
+RewriteRule ^admin/login$ admin/index.php [L]
+RewriteRule ^admin/dashboard$ admin/dashboard.php [L]
+RewriteRule ^admin/categories$ admin/categories.php [L]
+RewriteRule ^admin/products$ admin/products.php [L]
+RewriteRule ^admin/messages$ admin/messages.php [L]
+RewriteRule ^admin/faqs$ admin/faqs.php [L]
+RewriteRule ^admin/settings$ admin/settings.php [L]
+RewriteRule ^admin/logout$ admin/logout.php [L]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Prevent directory listing
+Options -Indexes
+
+# Never serve database dumps or includes directly
+<FilesMatch "\.(sql)$">
+    Require all denied
+</FilesMatch>
+RewriteRule ^includes/ - [F,L]
+
+# Cache control
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+
+# Compress files
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
+</IfModule>
