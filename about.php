@@ -3,8 +3,8 @@ $pageTitle = 'About Us';
 require_once 'includes/config.php';
 require_once 'includes/header.php';
 
-$aboutContent = getSetting('about_content');
-$companyName = getSetting('company_name');
+$aboutContent = getSetting('about_content', '');
+$companyName  = getSetting('company_name', 'kiuixshop');
 ?>
 <div class="toast-container"></div>
 
@@ -15,10 +15,10 @@ $companyName = getSetting('company_name');
         <div class="row justify-content-center text-center">
             <div class="col-lg-8" data-aos="fade-up">
                 <span class="hero-badge d-inline-flex mb-3">
-                    <i class="fas fa-info-circle me-2"></i> Who We Are
+                    <i class="fas fa-circle-info me-2"></i> Who We Are
                 </span>
                 <h1 class="page-hero-title">About <span class="text-accent">Us</span></h1>
-                <p class="page-hero-desc">Learn more about MMI ENGINEERING — your trusted partner in home services</p>
+                <p class="page-hero-desc">Learn more about <?php echo e($companyName); ?> &mdash; your trusted online shop</p>
             </div>
         </div>
     </div>
@@ -30,15 +30,15 @@ $companyName = getSetting('company_name');
         <div class="row g-5 align-items-center">
             <div class="col-lg-6" data-aos="fade-right">
                 <div class="about-image-wrapper">
-                    <div class="about-image-main rounded-4 overflow-hidden shadow-lg">
-                        <img src="/MMI/assets/images/pexels-whidegroup-26583385.jpg" alt="About MMI ENGINEERING" class="img-fluid w-100" style="min-height: 400px; object-fit: cover;">
+                    <div class="about-visual">
+                        <img src="<?php echo url('assets/images/logo-white.png'); ?>" alt="<?php echo e($companyName); ?>">
                     </div>
                     <div class="about-image-badge">
                         <div class="d-flex align-items-center gap-2">
-                            <i class="fas fa-calendar-check"></i>
+                            <i class="fas fa-heart"></i>
                             <div>
-                                <strong class="d-block">17+ Years</strong>
-                                <small>Of Excellence</small>
+                                <strong class="d-block">Customer First</strong>
+                                <small class="text-muted">Always</small>
                             </div>
                         </div>
                     </div>
@@ -46,38 +46,39 @@ $companyName = getSetting('company_name');
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <span class="section-badge">About Company</span>
-                <h2 class="section-heading mb-4"><?php echo htmlspecialchars($companyName); ?></h2>
+                <h2 class="section-heading mb-4"><?php echo e($companyName); ?></h2>
                 <div class="about-content">
                     <?php
-                    $paragraphs = explode("\n\n", $aboutContent);
+                    $paragraphs = preg_split('/\R{2,}/', trim($aboutContent));
                     foreach ($paragraphs as $para) {
-                        echo '<p class="text-muted mb-3">' . nl2br(htmlspecialchars(trim($para))) . '</p>';
+                        if (trim($para) === '') continue;
+                        echo '<p class="text-muted mb-3">' . nl2br(e(trim($para))) . '</p>';
                     }
                     ?>
                 </div>
                 <div class="row g-3 mt-4">
                     <div class="col-6">
                         <div class="about-stat-card">
-                            <h3 class="fw-bold text-accent mb-0">17+</h3>
-                            <small>Years Experience</small>
+                            <h3 class="fw-bold text-accent mb-0"><i class="fas fa-gem"></i></h3>
+                            <small>Quality Products</small>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="about-stat-card">
-                            <h3 class="fw-bold text-accent mb-0">1000+</h3>
-                            <small>Projects Done</small>
+                            <h3 class="fw-bold text-accent mb-0"><i class="fas fa-truck-fast"></i></h3>
+                            <small>Fast Delivery</small>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="about-stat-card">
-                            <h3 class="fw-bold text-accent mb-0">600+</h3>
-                            <small>Happy Clients</small>
+                            <h3 class="fw-bold text-accent mb-0"><i class="fas fa-tag"></i></h3>
+                            <small>Fair Prices</small>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="about-stat-card">
-                            <h3 class="fw-bold text-accent mb-0">24/7</h3>
-                            <small>Support</small>
+                            <h3 class="fw-bold text-accent mb-0"><i class="fab fa-whatsapp"></i></h3>
+                            <small>WhatsApp Support</small>
                         </div>
                     </div>
                 </div>
@@ -92,28 +93,28 @@ $companyName = getSetting('company_name');
         <div class="section-header text-center" data-aos="fade-up">
             <span class="section-badge">Our Values</span>
             <h2 class="section-heading">What Drives Us</h2>
-            <p class="section-desc">Our core values shape every service we deliver</p>
+            <p class="section-desc">Our core values shape every order we deliver</p>
         </div>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="why-card">
                     <div class="why-card-icon"><i class="fas fa-bullseye"></i></div>
                     <h5>Our Mission</h5>
-                    <p>To provide exceptional home services that exceed expectations through quality workmanship and customer care.</p>
+                    <p>To bring you great products at fair prices, with a shopping experience that is simple, honest and friendly.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="why-card">
                     <div class="why-card-icon"><i class="fas fa-eye"></i></div>
                     <h5>Our Vision</h5>
-                    <p>To be the most trusted home service company in Singapore, known for reliability and excellence.</p>
+                    <p>To become a shop customers trust and come back to, known for quality, reliability and care.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="why-card">
                     <div class="why-card-icon"><i class="fas fa-handshake"></i></div>
                     <h5>Our Promise</h5>
-                    <p>Every job is backed by our satisfaction guarantee — we don't rest until you're happy.</p>
+                    <p>Every order matters to us. If something is not right, we will work with you until it is.</p>
                 </div>
             </div>
         </div>
@@ -121,15 +122,15 @@ $companyName = getSetting('company_name');
 </section>
 
 <!-- CTA -->
-<section class="page-section cta-section" style="background: linear-gradient(160deg, #0a1628, #0f1f36);">
+<section class="page-section cta-section">
     <div class="container text-center" data-aos="fade-up">
-        <h2 class="text-white fw-bold mb-3">Ready to Get Started?</h2>
-        <p class="text-white-50 mb-4" style="max-width: 500px; margin-left: auto; margin-right: auto;">Book a service today and experience the MMI ENGINEERING difference.</p>
+        <h2 class="text-white fw-bold mb-3">Ready to Start Shopping?</h2>
+        <p class="text-white-50 mb-4" style="max-width: 500px; margin-left: auto; margin-right: auto;">Explore the collection and discover the <?php echo e($companyName); ?> difference.</p>
         <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="/MMI/services.php" class="btn btn-accent btn-lg rounded-pill px-5">
-                <i class="fas fa-tools me-2"></i>Our Services
+            <a href="<?php echo url('products.php'); ?>" class="btn btn-white btn-lg rounded-pill px-5">
+                <i class="fas fa-bag-shopping me-2"></i>Shop Products
             </a>
-            <a href="/MMI/contact.php" class="btn btn-outline-light btn-lg rounded-pill px-5">
+            <a href="<?php echo url('contact.php'); ?>" class="btn btn-outline-light btn-lg rounded-pill px-5">
                 <i class="fas fa-envelope me-2"></i>Contact Us
             </a>
         </div>
