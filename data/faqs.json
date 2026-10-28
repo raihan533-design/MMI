@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "question": "What services does MMI ENGINEERING offer?",
+      "answer": "We provide plumbing, electrical, AC & appliance repair, painting, cleaning and general home maintenance services in Singapore."
+    },
+    {
+      "question": "How do I book a service?",
+      "answer": "The quickest way is to message us on WhatsApp at +65 8587 8190. You can also use the contact form and we will get back to you."
+    },
+    {
+      "question": "What are your working hours?",
+      "answer": "We are available Monday to Sunday, 8:00 AM to 12:00 PM."
+    },
+    {
+      "question": "Which areas do you serve?",
+      "answer": "We serve customers across Singapore. Message us your address and we will confirm availability."
+    },
+    {
+      "question": "Do you offer a service guarantee?",
+      "answer": "Yes. Every job is backed by our satisfaction guarantee. If something is not right, let us know and we will make it right."
+    },
+    {
+      "question": "How do I get a quote?",
+      "answer": "Send us a short description (and photos if you can) on WhatsApp or through the contact form, and we will reply with a quote."
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "items": [
+    {
+      "name": "Pipe Leak Repair",
+      "category": "plumbing-services",
+      "description": "Fast diagnosis and repair of leaking pipes, joints and fittings.",
+      "image": ""
+    },
+    {
+      "name": "Toilet & Basin Fitting",
+      "category": "plumbing-services",
+      "description": "Installation and replacement of toilet bowls, basins and taps.",
+      "image": ""
+    },
+    {
+      "name": "Electrical Wiring & Rewiring",
+      "category": "electrical-services",
+      "description": "Safe wiring, rewiring and fault finding for homes and offices.",
+      "image": ""
+    },
+    {
+      "name": "Light & Fan Installation",
+      "category": "electrical-services",
+      "description": "Installation of ceiling lights, fans, switches and power points.",
+      "image": ""
+    },
+    {
+      "name": "Aircon General Servicing",
+      "category": "ac-appliance-repair",
+      "description": "Cleaning and servicing to keep your air conditioner cool and efficient.",
+      "image": ""
+    },
+    {
+      "name": "Aircon & Appliance Repair",
+      "category": "ac-appliance-repair",
+      "description": "Troubleshooting and repair for air conditioners and home appliances.",
+      "image": ""
+    },
+    {
+      "name": "Interior Wall Painting",
+      "category": "painting-services",
+      "description": "Neat, clean interior painting for rooms, ceilings and feature walls.",
+      "image": ""
+    },
+    {
+      "name": "Exterior & Office Painting",
+      "category": "painting-services",
+      "description": "Durable painting for exterior walls, shopfronts and office spaces.",
+      "image": ""
+    },
+    {
+      "name": "Home Deep Cleaning",
+      "category": "cleaning-services",
+      "description": "Thorough top-to-bottom cleaning for apartments, houses and offices.",
+      "image": ""
+    },
+    {
+      "name": "Post-Renovation Cleaning",
+      "category": "cleaning-services",
+      "description": "Dust, stain and debris removal after renovation works.",
+      "image": ""
+    },
+    {
+      "name": "General Home Repairs",
+      "category": "home-maintenance",
+      "description": "Door, cabinet, tile and fixture repairs handled by one team.",
+      "image": ""
+    },
+    {
+      "name": "Handyman Services",
+      "category": "home-maintenance",
+      "description": "Furniture assembly, mounting, small fixes and other odd jobs.",
+      "image": ""
+    }
+  ]
+}

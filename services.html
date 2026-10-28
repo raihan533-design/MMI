@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Services | MMI ENGINEERING</title>
+<meta name="description" content="Plumbing, electrical, AC &amp; appliance repair, painting, cleaning and home maintenance services in Singapore.">
+<meta name="theme-color" content="#0a1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a1628'/%3E%3Ctext x='50' y='66' font-size='48' font-weight='700' text-anchor='middle' fill='%23f59e0b' font-family='Arial'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-mmi fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><span class="brand-mark">M</span> MMI <span class="text-accent">ENGINEERING</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a class="btn btn-accent btn-sm rounded-pill px-3" href="https://wa.me/6585878190" data-setting-link="wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="toast-container"></div>
+
+<div class="services-hero">
+  <div class="services-hero-overlay"></div>
+  <div class="container position-relative" style="z-index:2">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-semibold"><i class="fas fa-tools me-1"></i> What We Offer</span>
+        <h1 class="display-4 fw-bold text-white mb-3">Our Services</h1>
+        <p class="lead text-white-50 mb-0">High-quality home services in Singapore — reliable, affordable, and expertly done.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="services-page-section" id="servicesSection">
+  <div class="container">
+    <div class="d-flex justify-content-end mb-3">
+      <button id="themeToggle" class="theme-toggle-btn" type="button" aria-label="Toggle theme"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
+    </div>
+
+    <div class="row justify-content-center mb-4" data-aos="fade-up">
+      <div class="col-lg-8 col-md-10">
+        <div class="search-wrapper">
+          <div class="search-icon"><i class="fas fa-search"></i></div>
+          <input type="text" id="serviceSearch" class="form-control service-search-input" placeholder="Search services..." autocomplete="off">
+          <div class="search-clear" id="searchClear"><i class="fas fa-times"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-sticky-wrapper" id="filterSticky">
+      <div class="category-filter">
+        <div class="filter-scroll" id="filterScroll">
+          <button class="filter-chip active" data-category="all" type="button">
+            <i class="fas fa-th-large me-2"></i>All Services <span class="filter-count">12</span>
+          </button>
+          <button class="filter-chip" data-category="plumbing-services" type="button">
+            <i class="fas fa-wrench me-2"></i>Plumbing Services <span class="filter-count">2</span>
+          </button>
+          <button class="filter-chip" data-category="electrical-services" type="button">
+            <i class="fas fa-bolt me-2"></i>Electrical Services <span class="filter-count">2</span>
+          </button>
+          <button class="filter-chip" data-category="ac-appliance-repair" type="button">
+            <i class="fas fa-snowflake me-2"></i>AC &amp; Appliance Repair <span class="filter-count">2</span>
+          </button>
+          <button class="filter-chip" data-category="painting-services" type="button">
+            <i class="fas fa-paint-roller me-2"></i>Painting Services <span class="filter-count">2</span>
+          </button>
+          <button class="filter-chip" data-category="cleaning-services" type="button">
+            <i class="fas fa-broom me-2"></i>Cleaning Services <span class="filter-count">2</span>
+          </button>
+          <button class="filter-chip" data-category="home-maintenance" type="button">
+            <i class="fas fa-tools me-2"></i>Home Maintenance <span class="filter-count">2</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="filterLoading" class="filter-loading" style="display:none"><div class="spinner"></div><span>Filtering services...</span></div>
+
+    <div class="row g-4" id="serviceGrid" style="margin-top:10px">
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="plumbing-services" data-name="pipe leak repair" data-desc="fast diagnosis and repair of leaking pipes, joints and fittings." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-wrench"></i></div>
+            <span class="service-cat-badge">Plumbing Services</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Pipe Leak Repair</h5>
+            <p class="service-card-text">Fast diagnosis and repair of leaking pipes, joints and fittings.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Pipe+Leak+Repair.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="plumbing-services" data-name="toilet &amp; basin fitting" data-desc="installation and replacement of toilet bowls, basins and taps." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-wrench"></i></div>
+            <span class="service-cat-badge">Plumbing Services</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Toilet &amp; Basin Fitting</h5>
+            <p class="service-card-text">Installation and replacement of toilet bowls, basins and taps.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Toilet+%26+Basin+Fitting.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="electrical-services" data-name="electrical wiring &amp; rewiring" data-desc="safe wiring, rewiring and fault finding for homes and offices." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-bolt"></i></div>
+            <span class="service-cat-badge">Electrical Services</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Electrical Wiring &amp; Rewiring</h5>
+            <p class="service-card-text">Safe wiring, rewiring and fault finding for homes and offices.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Electrical+Wiring+%26+Rewiring.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="electrical-services" data-name="light &amp; fan installation" data-desc="installation of ceiling lights, fans, switches and power points." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-bolt"></i></div>
+            <span class="service-cat-badge">Electrical Services</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Light &amp; Fan Installation</h5>
+            <p class="service-card-text">Installation of ceiling lights, fans, switches and power points.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Light+%26+Fan+Installation.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="ac-appliance-repair" data-name="aircon general servicing" data-desc="cleaning and servicing to keep your air conditioner cool and efficient." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-snowflake"></i></div>
+            <span class="service-cat-badge">AC &amp; Appliance Repair</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Aircon General Servicing</h5>
+            <p class="service-card-text">Cleaning and servicing to keep your air conditioner cool and efficient.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Aircon+General+Servicing.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="ac-appliance-repair" data-name="aircon &amp; appliance repair" data-desc="troubleshooting and repair for air conditioners and home appliances." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-snowflake"></i></div>
+            <span class="service-cat-badge">AC &amp; Appliance Repair</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Aircon &amp; Appliance Repair</h5>
+            <p class="service-card-text">Troubleshooting and repair for air conditioners and home appliances.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Aircon+%26+Appliance+Repair.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="painting-services" data-name="interior wall painting" data-desc="neat, clean interior painting for rooms, ceilings and feature walls." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-paint-roller"></i></div>
+            <span class="service-cat-badge">Painting Services</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Interior Wall Painting</h5>
+            <p class="service-card-text">Neat, clean interior painting for rooms, ceilings and feature walls.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Interior+Wall+Painting.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="painting-services" data-name="exterior &amp; office painting" data-desc="durable painting for exterior walls, shopfronts and office spaces." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-paint-roller"></i></div>
+            <span class="service-cat-badge">Painting Services</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Exterior &amp; Office Painting</h5>
+            <p class="service-card-text">Durable painting for exterior walls, shopfronts and office spaces.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Exterior+%26+Office+Painting.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="cleaning-services" data-name="home deep cleaning" data-desc="thorough top-to-bottom cleaning for apartments, houses and offices." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-broom"></i></div>
+            <span class="service-cat-badge">Cleaning Services</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Home Deep Cleaning</h5>
+            <p class="service-card-text">Thorough top-to-bottom cleaning for apartments, houses and offices.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Home+Deep+Cleaning.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="cleaning-services" data-name="post-renovation cleaning" data-desc="dust, stain and debris removal after renovation works." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-broom"></i></div>
+            <span class="service-cat-badge">Cleaning Services</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Post-Renovation Cleaning</h5>
+            <p class="service-card-text">Dust, stain and debris removal after renovation works.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Post-Renovation+Cleaning.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="home-maintenance" data-name="general home repairs" data-desc="door, cabinet, tile and fixture repairs handled by one team." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-tools"></i></div>
+            <span class="service-cat-badge">Home Maintenance</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">General Home Repairs</h5>
+            <p class="service-card-text">Door, cabinet, tile and fixture repairs handled by one team.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+General+Home+Repairs.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 service-item" data-category="home-maintenance" data-name="handyman services" data-desc="furniture assembly, mounting, small fixes and other odd jobs." data-aos="fade-up">
+        <div class="service-card">
+          <div class="service-card-img">
+            <div class="service-card-img-placeholder"><i class="fas fa-tools"></i></div>
+            <span class="service-cat-badge">Home Maintenance</span>
+          </div>
+          <div class="service-card-body">
+            <h5 class="service-card-title">Handyman Services</h5>
+            <p class="service-card-text">Furniture assembly, mounting, small fixes and other odd jobs.</p>
+            <div class="service-card-footer">
+              <a href="https://wa.me/6585878190?text=Hello+MMI+ENGINEERING%2C+I+am+interested+in+your+service%3A+Handyman+Services.+Please+provide+more+details." target="_blank" rel="noopener" class="btn btn-book"><i class="fab fa-whatsapp me-2"></i>Book Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="noResults" class="no-results" style="display:none">
+      <div class="empty-state">
+        <i class="fas fa-search fa-3x mb-3"></i>
+        <h4>No services match your criteria</h4>
+        <p class="text-muted">Try adjusting your search or filter selection.</p>
+        <button class="btn btn-accent mt-2" type="button" id="resetFilters"><i class="fas fa-redo me-2"></i>Reset Filters</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h5 class="footer-brand">MMI <span class="text-accent">ENGINEERING</span></h5>
+        <p class="footer-text">Trusted home service provider in Singapore with 17+ years of experience. Safe, reliable and affordable.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-title">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6 class="footer-title">Services</h6>
+        <ul class="footer-links">
+          <li><a href="services.html">Plumbing</a></li>
+          <li><a href="services.html">Electrical</a></li>
+          <li><a href="services.html">AC &amp; Appliance Repair</a></li>
+          <li><a href="services.html">Painting</a></li>
+          <li><a href="services.html">Cleaning</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="footer-title">Contact</h6>
+        <ul class="footer-links footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i> <span data-setting="address">Singapore</span></li>
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+6585878190" data-setting-link="tel" data-setting="phone">+65 8587 8190</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:mmiengpte@gmail.com" data-setting-link="mail" data-setting="email">mmiengpte@gmail.com</a></li>
+          <li><i class="fas fa-clock"></i> <span data-setting="working_days">Mon - Sun</span>, <span data-setting="working_hours">8:00 AM - 12:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> MMI ENGINEERING. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/6585878190" data-setting-link="wa" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/services.js"></script>
+</body>
+</html>

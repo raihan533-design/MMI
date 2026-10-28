@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | MMI ENGINEERING</title>
+<meta name="description" content="Contact MMI ENGINEERING in Singapore for quotes and service bookings.">
+<meta name="theme-color" content="#0a1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a1628'/%3E%3Ctext x='50' y='66' font-size='48' font-weight='700' text-anchor='middle' fill='%23f59e0b' font-family='Arial'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-mmi fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><span class="brand-mark">M</span> MMI <span class="text-accent">ENGINEERING</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+          <a class="btn btn-accent btn-sm rounded-pill px-3" href="https://wa.me/6585878190" data-setting-link="wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp me-1"></i> WhatsApp</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="toast-container"></div>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container position-relative" style="z-index:2">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <span class="hero-badge d-inline-flex mb-3"><i class="fas fa-envelope me-2"></i> Get In Touch</span>
+        <h1 class="page-hero-title">Contact <span class="text-accent">Us</span></h1>
+        <p class="page-hero-desc">Have a question or need a quote? We'd love to hear from you</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="page-section">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-7" data-aos="fade-right">
+        <span class="section-badge">Send Message</span>
+        <h2 class="section-heading mb-4">Drop Us a Line</h2>
+        <p class="text-muted mb-4">Fill out the form below and our team will respond within 24 hours.</p>
+
+        <div id="formAlert"></div>
+
+        <form id="contactForm" class="premium-form" novalidate>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold" for="cName">Your Name</label>
+              <input type="text" class="form-control premium-input" id="cName" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold" for="cEmail">Your Email</label>
+              <input type="email" class="form-control premium-input" id="cEmail" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold" for="cMessage">Message</label>
+              <textarea class="form-control premium-input" id="cMessage" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-accent btn-lg rounded-pill px-5" id="contactBtn"><i class="fas fa-paper-plane me-2"></i>Send Message</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="contact-info-premium">
+          <div class="d-flex align-items-center gap-3 mb-4"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><small class="text-white-50">Location</small><p class="mb-0 fw-semibold text-white" data-setting="address">Singapore</p></div></div>
+          <div class="d-flex align-items-center gap-3 mb-4"><div class="ci-icon"><i class="fas fa-phone-alt"></i></div><div><small class="text-white-50">Phone</small><p class="mb-0 fw-semibold text-white" data-setting="phone">+65 8587 8190</p></div></div>
+          <div class="d-flex align-items-center gap-3 mb-4"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><small class="text-white-50">Email</small><p class="mb-0 fw-semibold text-white" data-setting="email">mmiengpte@gmail.com</p></div></div>
+          <hr class="border-white-10 my-4">
+          <div class="mb-4">
+            <h6 class="fw-bold text-white mb-3">Working Hours</h6>
+            <div class="d-flex justify-content-between text-white-50"><span data-setting="working_days">Mon - Sun</span><span class="text-accent fw-semibold" data-setting="working_hours">8:00 AM - 12:00 PM</span></div>
+          </div>
+          <a href="https://wa.me/6585878190" data-setting-link="wa" target="_blank" rel="noopener" class="btn btn-success rounded-pill w-100 btn-lg mt-3"><i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h5 class="footer-brand">MMI <span class="text-accent">ENGINEERING</span></h5>
+        <p class="footer-text">Trusted home service provider in Singapore with 17+ years of experience. Safe, reliable and affordable.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-title">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6 class="footer-title">Services</h6>
+        <ul class="footer-links">
+          <li><a href="services.html">Plumbing</a></li>
+          <li><a href="services.html">Electrical</a></li>
+          <li><a href="services.html">AC &amp; Appliance Repair</a></li>
+          <li><a href="services.html">Painting</a></li>
+          <li><a href="services.html">Cleaning</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="footer-title">Contact</h6>
+        <ul class="footer-links footer-contact">
+          <li><i class="fas fa-map-marker-alt"></i> <span data-setting="address">Singapore</span></li>
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+6585878190" data-setting-link="tel" data-setting="phone">+65 8587 8190</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:mmiengpte@gmail.com" data-setting-link="mail" data-setting="email">mmiengpte@gmail.com</a></li>
+          <li><i class="fas fa-clock"></i> <span data-setting="working_days">Mon - Sun</span>, <span data-setting="working_hours">8:00 AM - 12:00 PM</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> MMI ENGINEERING. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/6585878190" data-setting-link="wa" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

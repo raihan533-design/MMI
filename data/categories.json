@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "name": "Plumbing Services",
+      "slug": "plumbing-services",
+      "icon": "fas fa-wrench",
+      "description": "Pipe repair & fittings"
+    },
+    {
+      "name": "Electrical Services",
+      "slug": "electrical-services",
+      "icon": "fas fa-bolt",
+      "description": "Wiring & fixing"
+    },
+    {
+      "name": "AC & Appliance Repair",
+      "slug": "ac-appliance-repair",
+      "icon": "fas fa-snowflake",
+      "description": "AC service & repair"
+    },
+    {
+      "name": "Painting Services",
+      "slug": "painting-services",
+      "icon": "fas fa-paint-roller",
+      "description": "Home & office painting"
+    },
+    {
+      "name": "Cleaning Services",
+      "slug": "cleaning-services",
+      "icon": "fas fa-broom",
+      "description": "Deep cleaning"
+    },
+    {
+      "name": "Home Maintenance",
+      "slug": "home-maintenance",
+      "icon": "fas fa-tools",
+      "description": "General repairs"
+    }
+  ]
+}
